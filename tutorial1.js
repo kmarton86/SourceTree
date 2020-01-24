@@ -6,14 +6,14 @@ console.log("hello world")
 //1.
 /* Data types:
 undefined, null, boolean, string, symbol, number, and object*/
-var myName = "Marton"
+var myName = "Marton";
 
-myName = 8
+myName = 8;
 // let will only be used in the scope it was declared
-let myName2 = "Hello"
+let myName2 = "Hello";
 
 //const should never be changed*/
-const pi = 3.14
+const pi = 3.14;
 
 console.log("//1.----")
 console.log("myName:" + myName + " ,myName2:" + myName2 + " ,pi:" + pi)
@@ -40,7 +40,7 @@ b = 10;
 var c = "I am a" ;
 
 a = a + b + 2;
-c = c + " String"
+c = c + " String";
 console.log("//3.----")
 console.log(a)
 
@@ -85,13 +85,16 @@ console.log("a: " + a + ", b: " + b + ", c: " + c + ", d: " + d)
 //--------------------------------------------
 //5.
 //Strings
+
 //Escaping Literal quotes
 var myStr = "I am a \"double quated\" string";
 console.log("//5.----")
 console.log(myStr)
+
 //quoting strings with single quotes
 var myStr2 = 'https://visualstudio.microsoft.com/free-developer-offers/';
 console.log(myStr2)
+
 //escape sequences
 /*
 \' single quote
@@ -105,9 +108,43 @@ console.log(myStr2)
 */
 
 //concatenating strings
-var firstName = "Bela"
-var lastName = "Nagy"
-var fullName =  firstName + lastName
+var firstName = "Bela";
+var lastName = "Nagy";
+var fullName =  firstName + lastName;
 console.log(fullName)
+console.log(lastName += firstName)
 
 //find length of String
+var firstNameLength = 0;
+firstNameLength = firstName.length;
+console.log("first name lenght:" + firstNameLength + " ,first name:" + firstName)
+
+//Bracket notation to find first char in string
+var firstLetterOfFirstName = firstName[0];
+console.log("first letter of first name : " + firstLetterOfFirstName)
+
+//string immutability
+myStr = "Jello World";
+myStr[0] = "H";  // Fix
+console.log(myStr) //cannot change an individual string char
+
+//Bracket Notation to find last char in string
+var lastCharOfFirstName = firstName[firstName.length - 1];
+console.log(lastCharOfFirstName)
+
+//wordBlanks function
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+
+    var result = "";
+    result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store quite " + myAdverb;
+
+    return result;
+}
+
+//change the words here to test the function
+console.log(wordBlanks("dog", "big", "ran", "quickly"));
+console.log(wordBlanks("cat", "angry", "jumped", "slowly"));
+
+//--------------------------------------------
+//6.
+//Arrays
